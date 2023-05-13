@@ -64,9 +64,8 @@ if __name__ == '__main__':
 
         print('** Finished **')
         sys.exit(0)
-
+    except FileNotFoundError:
+        print('{} Not Found'.format(file_name))
     except Exception as e:
         print(f'An error occurred: {str(e)}')
         sys.exit(1)
-    except FileNotFoundError:
-        print('{} Not Found'.format(file_name))
